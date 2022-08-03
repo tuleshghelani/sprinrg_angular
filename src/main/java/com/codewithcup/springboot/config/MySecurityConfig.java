@@ -63,7 +63,8 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
                 .cors()
                 .disable()
                 .authorizeRequests()
-                .antMatchers("/generate-token","/user/").permitAll()
+                .antMatchers("/").permitAll()
+                .antMatchers(AUTH_WHITELIST).permitAll()
                 .antMatchers(HttpMethod.OPTIONS).permitAll()
                 .anyRequest().authenticated()
                 .and()
@@ -73,4 +74,14 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
     }
+
+    private static final String[] AUTH_WHITELIST = {
+//            "/#**",
+//            "/#/index.html**",
+            "/**.html**",
+//            "/#/**",
+            "/***.js",
+            "/***.css",
+            "/generate-token","/user/"};
+
 }

@@ -1,0 +1,66 @@
+# Created at 2022-07-31T11:39:51.501
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: null
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.lang.Thread.run(Thread.java:750)
+
+
+# Created at 2022-07-31T11:39:52.357
+Unexpected IOException with stream: 2022-07-31 11:39:52.344  INFO 9192 --- [           main] c.c.s.e.ExamSystemApplicationTests       : Started ExamSystemApplicationTests in 19.717 seconds (JVM running for 21.08)
+
+
+# Created at 2022-07-31T11:39:52.359
+Unexpected IOException with stream: 2022-07-31 11:39:52.359  INFO 9192 --- [           main] c.c.springboot.ExamSystemApplication     : <=================Application Start Point=================>
+
+
+# Created at 2022-07-31T11:39:52.895
+Unexpected IOException with stream: Hibernate: 
+    select
+        user0_.id as id1_5_,
+        user0_.email as email2_5_,
+        user0_.enabled as enabled3_5_,
+        user0_.first_name as first_na4_5_,
+        user0_.last_name as last_nam5_5_,
+        user0_.password as password6_5_,
+        user0_.phone as phone7_5_,
+        user0_.profile as profile8_5_,
+        user0_.username as username9_5_ 
+    from
+        users user0_ 
+    where
+        user0_.username=?
+
+
+# Created at 2022-07-31T11:39:53.536
+Unexpected IOException with stream: Hibernate: 
+    select
+        usersroles0_.user_id as user_id3_4_0_,
+        usersroles0_.user_role_id as user_rol1_4_0_,
+        usersroles0_.user_role_id as user_rol1_4_1_,
+        usersroles0_.role_role_id as role_rol2_4_1_,
+        usersroles0_.user_id as user_id3_4_1_,
+        role1_.role_id as role_id1_3_2_,
+        role1_.role_name as role_nam2_3_2_ 
+    from
+        user_role usersroles0_ 
+    left outer join
+        roles role1_ 
+            on usersroles0_.role_role_id=role1_.role_id 
+    where
+        usersroles0_.user_id=?
+
+
+# Created at 2022-07-31T11:39:53.880
+Unexpected IOException: 5,1,com.codewithcup.springboot.examsystem.ExamSystemApplicationTests,contextLoads,null,null,null
+
+
+# Created at 2022-07-31T11:39:54.264
+Unexpected IOException: 6,1,com.codewithcup.springboot.examsystem.ExamSystemApplicationTests,contextLoads,null,null,null
+
+
+# Created at 2022-07-31T11:39:54.280
+Unexpected IOException: 2,1,org.apache.maven.surefire.junitplatform.JUnitPlatformProvider,com.codewithcup.springboot.examsystem.ExamSystemApplicationTests,null,null,null
+
+
